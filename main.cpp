@@ -16,6 +16,32 @@ double getCurrentTime() {
 
 string yesorno(bool ans) { return (ans ? "YES" : "NO"); }
 
+using Vector2d = vector<vector<int>>;
+using Pair = pair<int, int>;
+const int INF = 1e9;
+
+class Graph{
+public:
+	Vector2d adj;
+	vector<bool> used;
+	vector<int> tin;
+	int timer;
+
+public:
+	Graph(int n)
+	: adj(n), used(n), tin(n)
+	{
+		timer = 1;
+	}
+
+	void init(){
+		fill(used.begin(), used.end(), false);
+	}
+
+	int size() { return adj.size() }
+	vector<int>& operator[](int index) { return adj[index]; }
+};
+
 void solve(){
 
 }
