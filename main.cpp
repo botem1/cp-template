@@ -18,11 +18,13 @@ string yesorno(bool ans) { return (ans ? "YES" : "NO"); }
 
 using Vector2d = vector<vector<int>>;
 using Pair = pair<int, int>;
+using Edge = int;
+
 const int INF = 1e9;
 
 class Graph{
 public:
-	Vector2d adj;
+	vector<vector<Edge>> adj;
 	vector<bool> used;
 	vector<int> tin;
 	int timer;
@@ -38,7 +40,7 @@ public:
 		fill(used.begin(), used.end(), false);
 	}
 
-	int size() { return adj.size() }
+	int size() { return adj.size(); }
 	vector<int>& operator[](int index) { return adj[index]; }
 };
 
